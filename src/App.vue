@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="app" :style="{ backgroundImage: `url(${nestoraBg})` }">
     <nav class="navbar">
       <div class="nav-content">
         <div class="nav-left">
@@ -92,6 +92,7 @@
 
 <script>
 import ExclusiveProperties from './components/ExclusiveProperties.vue'
+import nestoraBg from './assets/nestora.png'
 
 export default {
   name: 'App',
@@ -115,7 +116,8 @@ export default {
         { title: 'Beach House', location: 'California', price: '$6,20,000', color: '#45B7D1', sqft: '2,800 sqft', beds: 5, baths: 4 },
         { title: 'City Apartment', location: 'New York', price: '$3,80,000', color: '#96CEB4', sqft: '1,800 sqft', beds: 2, baths: 2 },
         { title: 'Mountain Retreat', location: 'Colorado', price: '$7,50,000', color: '#FFEAA7', sqft: '3,200 sqft', beds: 6, baths: 5 }
-      ]
+      ],
+      nestoraBg
     }
   },
   methods: {
@@ -229,16 +231,14 @@ export default {
 .app {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
   position: relative;
 }
 
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
+  position: relative;
   padding: 20px 0;
 }
 
@@ -338,7 +338,7 @@ export default {
 .hero-title {
   color: var(--Background-Pure-White, #FFF);
   font-family: "Noto Sans", sans-serif;
-  font-size: 120px;
+  font-size: 110px;
   font-style: normal;
   font-weight: 700;
   line-height: 112px;
