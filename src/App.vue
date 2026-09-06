@@ -87,17 +87,20 @@
     </section>
 
     <ExclusiveProperties />
+    <JourneySection />
   </div>
 </template>
 
 <script>
 import ExclusiveProperties from './components/ExclusiveProperties.vue'
 import nestoraBg from './assets/nestora.png'
+import JourneySection from './components/journeySection.vue'
 
 export default {
   name: 'App',
   components: {
-    ExclusiveProperties
+    ExclusiveProperties,
+    JourneySection
   },
   data() {
     return {
@@ -322,7 +325,7 @@ export default {
   align-items: center;
   width: 100%;
   max-width: 1224px;
-  height: 900px;
+  height: 700px;
   margin: 0 auto;
   box-sizing: border-box;
   position: relative;
