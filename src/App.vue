@@ -94,7 +94,7 @@
 <script>
 import ExclusiveProperties from './components/ExclusiveProperties.vue'
 import nestoraBg from './assets/nestora.png'
-import JourneySection from './components/journeySection.vue'
+import JourneySection from './components/JourneySection.vue'
 
 export default {
   name: 'App',
